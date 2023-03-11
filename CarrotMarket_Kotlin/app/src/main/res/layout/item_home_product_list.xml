@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/img_home"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_home1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        android:padding="4dp"
+        android:text="신형 포코폰 X4 GT 256G 판매"
+        android:textColor="#111"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_home"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_home2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        android:text="상무2동"
+        app:layout_constraintStart_toEndOf="@id/img_home"
+        app:layout_constraintTop_toBottomOf="@id/tv_home1" />
+
+    <TextView
+        android:id="@+id/tv_home_dot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text=" · "
+        app:layout_constraintStart_toEndOf="@id/tv_home2"
+        app:layout_constraintTop_toBottomOf="@id/tv_home1" />
+
+    <TextView
+        android:id="@+id/tv_home3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="1시간전"
+        app:layout_constraintStart_toEndOf="@id/tv_home_dot"
+        app:layout_constraintTop_toBottomOf="@id/tv_home1" />
+
+
+    <TextView
+        android:id="@+id/tv_home4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        android:text="150,000원"
+        android:textColor="#111"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/img_home_favorite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_home"
+        app:layout_constraintTop_toBottomOf="@id/tv_home2" />
+
+    <ImageView
+        android:id="@+id/img_home_chat"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_forum_fill0_wght400_grad0_opsz48"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_home_chat"
+        app:layout_constraintTop_toBottomOf="@+id/tv_home4" />
+
+    <TextView
+        android:id="@+id/tv_home_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_home_favorite"
+        app:layout_constraintTop_toBottomOf="@id/tv_home4" />
+
+
+    <ImageView
+        android:id="@+id/img_home_favorite"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_favorite_fill0_wght400_grad0_opsz48"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_home_favorite"
+        app:layout_constraintTop_toBottomOf="@id/tv_home4" />
+
+    <TextView
+        android:id="@+id/tv_home_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="4dp"
+        android:text="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_home4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

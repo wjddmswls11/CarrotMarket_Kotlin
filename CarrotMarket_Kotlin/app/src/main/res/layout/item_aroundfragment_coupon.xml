@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/store1_1"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/store1_1"
+            app:layout_constraintEnd_toStartOf="@+id/store1_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/store1_2"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/store1_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/store1_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/around_storename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center_vertical"
+            android:text="곱품격"
+            android:textColor="#111"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/store1_1" />
+
+        <TextView
+            android:id="@+id/store_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_margin="12dp"
+            android:text="100% 한우 소곱창,소대창,소막창과 함께..."
+            android:textColor="#111"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/around_storename" />
+
+
+        <TextView
+            android:id="@+id/store_distance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_margin="12dp"
+            android:text="3.5km"
+            android:textColor="@color/carrot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/store_info" />
+
+        <TextView
+            android:id="@+id/tv_around_couponDot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text=" · "
+            app:layout_constraintStart_toEndOf="@+id/store_distance"
+            app:layout_constraintTop_toBottomOf="@id/store_info"
+
+            />
+
+        <TextView
+            android:id="@+id/store_review1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="후기2"
+            app:layout_constraintStart_toEndOf="@+id/tv_around_couponDot"
+            app:layout_constraintTop_toBottomOf="@id/store_info" />
+
+        <TextView
+            android:id="@+id/tv_around_couponDot2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text=" · "
+            app:layout_constraintStart_toEndOf="@+id/store_review1"
+            app:layout_constraintTop_toBottomOf="@+id/store_info" />
+
+        <TextView
+            android:id="@+id/store_custom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="단골 21"
+            app:layout_constraintStart_toEndOf="@+id/tv_around_couponDot2"
+            app:layout_constraintTop_toBottomOf="@+id/store_info" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:backgroundTint="@color/carrot_softgray"
+            android:padding="20dp"
+            app:cardCornerRadius="15dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/store_distance">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/store_guest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="12dp"
+                android:text="좋은데이"
+                android:textColor="#111"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/store_review2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="8dp"
+
+                android:text="여기 완전 맛났었는데!직원분들이 다 구워주셔서 엄청 편하고 좋았어..."
+                android:textColor="#111"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/store_guest"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
