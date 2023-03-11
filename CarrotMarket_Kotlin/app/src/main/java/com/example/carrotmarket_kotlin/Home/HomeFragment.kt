@@ -108,7 +108,6 @@ class HomeFragment : Fragment() {
                 )
             )
         }
-        findDate()
         return fBinding.root
     }
 
@@ -126,10 +125,6 @@ class HomeFragment : Fragment() {
 
 
 
-    }
-
-    private fun findDate(): MutableList<HomeProductData> {
-        return homeList
     }
 
 

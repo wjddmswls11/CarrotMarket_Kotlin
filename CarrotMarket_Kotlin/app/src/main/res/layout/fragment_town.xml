@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,137 +18,116 @@
         app:title="치평동"
         app:titleTextAppearance="@style/toolbarTitleStyle" />
 
-    <ScrollView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar_town_second"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBar_town_second">
+        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraint_town_horizon"
-            android:layout_width="match_parent"
+        <HorizontalScrollView
+            android:id="@+id/town_horizon"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
-            >
-
-            <HorizontalScrollView
-                android:id="@+id/town_horizon"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:scrollbars="none"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodNews"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="동네소식"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodQuestion"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="동네질문"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodNews"
-                        app:layout_constraintTop_toTopOf="parent"
-
-                        />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodRestaurant"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="동네맛집"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodQuestion"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodHobbies"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="취미생활"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodRestaurant"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodDaily"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="일상"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodHobbies"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodLost"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="분실/실종센터"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodDaily"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodIncident"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="동네사건사고"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodLost"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodPlease"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="해주세요"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodIncident"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <Button
-                        android:id="@+id/btn_town_neighborhoodPhoto"
-                        style="@style/tomn_button"
-                        android:backgroundTint="@color/carrot_softgray"
-                        android:text="동네사진전"
-                        app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodPlease"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraint_town_horizon">
+            app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recview"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@color/carrot_softgray"
-                    android:scrollbars="none"
-                    tools:listitem="@layout/item_townfragment"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/constraint_town_first"
+                >
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodNews"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="동네소식"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                <Button
+                    android:id="@+id/btn_town_neighborhoodQuestion"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="동네질문"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodNews"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodRestaurant"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="동네맛집"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodQuestion"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodHobbies"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="취미생활"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodRestaurant"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodDaily"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="일상"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodHobbies"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodLost"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="분실/실종센터"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodDaily"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodIncident"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="동네사건사고"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodLost"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodPlease"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="해주세요"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodIncident"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_town_neighborhoodPhoto"
+                    style="@style/tomn_button"
+                    android:backgroundTint="@color/carrot_softgray"
+                    android:text="동네사진전"
+                    app:layout_constraintStart_toEndOf="@+id/btn_town_neighborhoodPlease"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Town001MainProductRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/carrot_softgray"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_townfragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/town_horizon"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

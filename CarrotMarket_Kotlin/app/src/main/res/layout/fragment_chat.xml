@@ -32,7 +32,7 @@
         android:layout_height="0dp"
         tools:listitem="@layout/item_chatfragment"
         android:scrollbars="none"
-        android:id="@+id/chat_recv"
+        android:id="@+id/Chat001MainProductRecyclerView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_chatFragment_line"
