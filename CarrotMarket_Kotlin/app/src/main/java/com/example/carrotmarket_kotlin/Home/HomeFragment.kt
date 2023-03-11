@@ -3,6 +3,7 @@ package com.example.carrotmarket_kotlin.Home
 
 import android.app.Activity
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -77,6 +78,33 @@ class HomeFragment : Fragment() {
                     "소형 냉장고 팝니다","광산구 우산동","그저께",
                     "120,000원","4","4","주옥",
                     "디지털기기","사용 거의 안했습니다 옮기시는거 생각해서 싸게 올립니다!","248"
+                )
+            )
+            add(
+                HomeProductData(R.drawable.home_item6_1,R.drawable.ic_forum_fill0_wght400_grad0_opsz48,
+                    R.drawable.ic_favorite_fill0_wght400_grad0_opsz48,
+                    R.drawable.home_item6_2,R.drawable.home_item6_3,R.drawable.home_item6_4,R.drawable.intent_member_img3,
+                    "원적외선 반신욕 사우나","서구 풍암동","끌올 23분 전",
+                    "650,000원","0","3", "뚱이",
+                    "생활가전","작년에110에 구매했습니다\n정상작동되고 사서 5번도 안썻고\n직접 가져가셔야 합니다","169"
+                )
+            )
+            add(
+                HomeProductData(R.drawable.home_item7_1,R.drawable.ic_forum_fill0_wght400_grad0_opsz48,
+                    R.drawable.ic_favorite_fill0_wght400_grad0_opsz48,
+                    0,0,0,R.drawable.profile_round_person,
+                    "로렉스 요트마스터 42 옐로우","서구 농성1동","끌올 그저께",
+                    "4100만원","4","5","치평동장사꾼",
+                    "생활가전","22년 10월 국내 풀셋 네고 ㅈㅅ\n필름까지 같이 드림","847"
+                )
+            )
+            add(
+                HomeProductData(R.drawable.home_item8_1,R.drawable.ic_forum_fill0_wght400_grad0_opsz48,
+                    R.drawable.ic_favorite_fill0_wght400_grad0_opsz48,
+                    R.drawable.home_item8_2,R.drawable.home_item8_3,R.drawable.home_item8_4,R.drawable.profile_round_person,
+                    "ps5 플스5 플레이스테이션5 판매합니다","남구 월산동","6시간 전",
+                    "500,000원","2","3","VV",
+                    "디지털기기","금일 저녁 거래 가능합니다\n,-오셔서 거래하는 조건입니다.\npPS5 판매합니다.","221"
                 )
             )
         }
