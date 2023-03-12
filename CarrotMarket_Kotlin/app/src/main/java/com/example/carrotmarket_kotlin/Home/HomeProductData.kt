@@ -1,6 +1,7 @@
 package com.example.carrotmarket_kotlin.Home
 
 import android.widget.ImageView
+import java.io.Serializable
 
 data class HomeProductData(
     val img_home: Int, val img_home_chat: Int, val img_home_favorite: Int, val img_home2: Int,
@@ -10,6 +11,6 @@ data class HomeProductData(
     val tv_home_favorite: String, val home_intenttxt1: String,
     val home_intent_type: String, val home_intent_contents: String,
     val home_intent_look: String
-)
+): Serializable
 
 

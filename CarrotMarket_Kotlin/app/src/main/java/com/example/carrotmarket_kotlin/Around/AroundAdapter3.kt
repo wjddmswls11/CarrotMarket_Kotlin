@@ -21,23 +21,31 @@ class AroundAdapter3(private val aroundList3 : MutableList<AroundProductData3>) 
 
     override fun onBindViewHolder(holder: Recholder, position: Int) {
         holder.bind(aroundList3[position])
-
-
     }
 
     override fun getItemCount(): Int {
         return aroundList3.size
     }
 
-/*
-    ImageView around_mini_img, around_mini_perimgper;
-    TextView mini_title, mini_title_detail, around_mini_star, aound_mini_review,around_mini_whitedetail,around_mini_reviewtxt;
-*/
 
-
-    class Recholder(private val aBinding: ItemAroundfragmentCoupon2Binding) : RecyclerView.ViewHolder(aBinding.root){
+    class Recholder(
+        private val aBinding: ItemAroundfragmentCoupon2Binding
+        ) : RecyclerView.ViewHolder(aBinding.root){
         fun bind(item: AroundProductData3) {
-            Glide.with(itemView).load(item.around_coupon).into(aBinding.aroundCoupon)
+            Glide.with(itemView).apply {
+                load(item.around_coupon).into(aBinding.aroundCoupon)
+                load(item.around_coupon_perimgper).into(aBinding.aroundCouponPerimgper)
+                load(item.popup_coupon).into(aBinding.popupCoupon)
+            }
+
+            aBinding.apply {
+                aroundCouponShopname.text = item.around_coupon_shopname
+                aroundCouponDistance.text = item.around_coupon_distance
+                arouondCouponInfo.text = item.arouond_coupon_info
+                aroundCouponPerson.text = item.around_coupon_person
+                couponGuest.text = item.coupon_guest
+                couponReview.text = item.coupon_review
+            }
         }
     }
 

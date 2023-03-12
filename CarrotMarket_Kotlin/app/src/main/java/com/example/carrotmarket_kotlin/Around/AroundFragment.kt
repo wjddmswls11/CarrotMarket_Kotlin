@@ -190,7 +190,7 @@ class AroundFragment : Fragment() {
         aroundList5 = ArrayList<AroundProductData5>().apply {
             add(
                 AroundProductData5(
-                    R.drawable.home_item1_1, R.drawable.ic_favorite_fill0_wght400_grad0_opsz48,
+                    R.drawable.around_apple, R.drawable.ic_favorite_fill0_wght400_grad0_opsz48,
                     "용진농원","3.1km","단감",
                     "16%","25,000원","20"));
             add(

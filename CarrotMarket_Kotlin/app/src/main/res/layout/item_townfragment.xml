@@ -48,15 +48,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_town_btn" />
 
-        <ImageView
-            android:id="@+id/img_town_1"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="16dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/char1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_town_2" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -64,7 +55,7 @@
             android:layout_margin="16dp"
             android:id="@+id/constraintlayout_townitem_add"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_town_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_town_2"
             >
             <TextView
                 android:id="@+id/tv_town_id"
