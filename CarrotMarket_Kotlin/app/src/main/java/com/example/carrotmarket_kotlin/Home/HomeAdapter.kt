@@ -19,15 +19,13 @@ import java.util.*
 class HomeAdapter(private val homeList: MutableList<HomeProductData>) : RecyclerView.Adapter<HomeAdapter.RecHolder>(
 ) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecHolder {
-        val viewLayout = LayoutInflater.from(parent.context).inflate(R.layout.item_home_product_list ,parent,false  );
-        // val iBinding =  LayoutInflater.inflate(LayoutInflater.from(parent.context), parent, false)
-        return RecHolder(viewLayout)
+        val aBinding =
+            ItemHomeProductListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return RecHolder(aBinding)
     }
 
-    override fun onBindViewHolder(holder: RecHolder, position: Int) {
-        val carrotHome = homeList[position]
-        holder.tv_home1.text = carrotHome.tv_home1
-        holder.imghome.setImageResource(carrotHome.img_home)
+    override fun onBindViewHolder(holder: RecHolder, position: Int) {www
+        holder.bind(homeList[position])
     }
 
     override fun getItemCount(): Int {
@@ -35,11 +33,11 @@ class HomeAdapter(private val homeList: MutableList<HomeProductData>) : Recycler
     }
 
 
-
-
-    class RecHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
-            val imghome = itemView.findViewById<ImageView>(R.id.img_home)
-            val tv_home1 = itemView.findViewById<TextView>(R.id.tv_home1)
+    class RecHolder(private val aBinding: ItemHomeProductListBinding) : RecyclerView.ViewHolder(aBinding.root) {
+        fun bind(item: HomeProductData) {
+            aBinding.tvHome1.text = item.tv_home1
+            Glide.with(itemView).load(item.img_home).into(aBinding.imgHome)
         }
     }
+}
 
