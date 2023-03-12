@@ -30,6 +30,7 @@
         android:layout_marginLeft="4dp"
         android:padding="4dp"
         android:text="신형 포코폰 X4 GT 256G 판매"
+        android:lines="1"
         android:textColor="#111"
         android:textSize="16sp"
         android:textStyle="bold"
