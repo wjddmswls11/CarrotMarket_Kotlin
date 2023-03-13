@@ -67,7 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:gravity="center"
-            android:onClick="onDialogClicked"
             android:src="@drawable/dsffa"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/arouond_coupon_info" />

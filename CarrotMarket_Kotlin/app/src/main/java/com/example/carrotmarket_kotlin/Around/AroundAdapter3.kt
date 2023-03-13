@@ -27,12 +27,6 @@ class AroundAdapter3(private val aroundList3: MutableList<AroundProductData3>) :
 
     override fun onBindViewHolder(holder: Recholder, position: Int) {
         holder.bind(aroundList3[position])
-
-        aBinding.popupCoupon.setOnClickListener {
-            val intent = Intent(holder.itemView?.context, AroundActivity::class.java)
-            intent.putExtra("fromAround", aroundList3[position])
-            ContextCompat.startActivity(holder.itemView.context, intent, null)
-        }
     }
 
     override fun getItemCount(): Int {
