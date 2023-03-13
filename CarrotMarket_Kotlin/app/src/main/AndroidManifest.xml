@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarrotMarket_Kotlin">
         <activity
+            android:name=".Around.AroundActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Dialog"
+            />
+
+        <activity
             android:name=".Home.HomeActivity"
             android:exported="true" />
         <activity

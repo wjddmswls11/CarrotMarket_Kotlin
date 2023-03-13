@@ -6,4 +6,4 @@ data class AroundProductData3(
     val around_coupon_shopname: String, val around_coupon_distance: String,
     val arouond_coupon_info: String, val around_coupon_person: String,
     val coupon_guest: String, val coupon_review: String
-)
+): java.io.Serializable

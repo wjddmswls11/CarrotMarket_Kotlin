@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/around_coupon"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="152dp"
             android:layout_marginBottom="20dp"
             android:scaleType="centerCrop"
             android:src="@drawable/coupon1"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:gravity="center"
-            android:onClick="onBindViewHolder"
+            android:onClick="onDialogClicked"
             android:src="@drawable/dsffa"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/arouond_coupon_info" />
@@ -86,22 +86,22 @@
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/around_coupon_perimgper"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:src="@drawable/profile_round_person" />
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/around_coupon_perimgper2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="15dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="16dp"
                 android:src="@drawable/profile_round_person" />
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/around_coupon_perimgper3"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="32dp"
                 android:src="@drawable/profile_round_person" />
         </FrameLayout>
 
@@ -109,7 +109,7 @@
             android:id="@+id/around_coupon_person"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="12dp"
@@ -141,7 +141,7 @@
                 android:gravity="center_vertical"
                 android:text="좋은데이"
                 android:textColor="#111"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -153,7 +153,7 @@
                 android:layout_gravity="center_vertical"
                 android:text="하 저 여기 너무너무너무 좋아요 원장님도 대빵친"
                 android:textColor="#111"
-                android:textSize="15dp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/coupon_guest" />
         </androidx.constraintlayout.widget.ConstraintLayout>

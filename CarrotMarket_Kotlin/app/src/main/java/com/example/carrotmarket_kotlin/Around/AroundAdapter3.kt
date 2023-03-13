@@ -1,8 +1,10 @@
 package com.example.carrotmarket_kotlin.Around
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.carrotmarket_kotlin.Home.HomeProductData
@@ -10,17 +12,27 @@ import com.example.carrotmarket_kotlin.R
 import com.example.carrotmarket_kotlin.databinding.ItemAroundfragmentBinding
 import com.example.carrotmarket_kotlin.databinding.ItemAroundfragmentCoupon2Binding
 
-class AroundAdapter3(private val aroundList3 : MutableList<AroundProductData3>) : RecyclerView.Adapter<AroundAdapter3.Recholder>() {
-
-
+class AroundAdapter3(private val aroundList3: MutableList<AroundProductData3>) :
+    RecyclerView.Adapter<AroundAdapter3.Recholder>() {
+    lateinit var aBinding : ItemAroundfragmentCoupon2Binding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Recholder {
-        val aBinding = ItemAroundfragmentCoupon2Binding.inflate(LayoutInflater.from(parent.context), parent, false)
+        aBinding = ItemAroundfragmentCoupon2Binding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
         return Recholder(aBinding)
     }
 
     override fun onBindViewHolder(holder: Recholder, position: Int) {
         holder.bind(aroundList3[position])
+
+        aBinding.popupCoupon.setOnClickListener {
+            val intent = Intent(holder.itemView?.context, AroundActivity::class.java)
+            intent.putExtra("fromAround", aroundList3[position])
+            ContextCompat.startActivity(holder.itemView.context, intent, null)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +42,7 @@ class AroundAdapter3(private val aroundList3 : MutableList<AroundProductData3>) 
 
     class Recholder(
         private val aBinding: ItemAroundfragmentCoupon2Binding
-        ) : RecyclerView.ViewHolder(aBinding.root){
+    ) : RecyclerView.ViewHolder(aBinding.root) {
         fun bind(item: AroundProductData3) {
             Glide.with(itemView).apply {
                 load(item.around_coupon).into(aBinding.aroundCoupon)
@@ -47,6 +59,9 @@ class AroundAdapter3(private val aroundList3 : MutableList<AroundProductData3>) 
                 couponReview.text = item.coupon_review
             }
         }
+
+
+
     }
 
 }
