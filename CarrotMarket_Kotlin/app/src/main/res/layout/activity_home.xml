@@ -323,6 +323,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraint_homeActivity_4">
 
                     <ImageView
+                        android:onClick="@{()->home.increase()}"
                         android:id="@+id/home_intent_favorite"
                         android:layout_width="40dp"
                         android:layout_height="40dp"

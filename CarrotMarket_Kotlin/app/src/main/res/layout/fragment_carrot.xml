@@ -156,6 +156,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
+                            android:id="@+id/carrot_viewModel_plus"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -168,11 +169,15 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
 
-                        <TextView
+                        <Button
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="계좌송금"
+                            android:id="@+id/button_increase"
+                            android:onClick="@{()->carrot.increase()}"
+                            android:textColor="@color/carrot_gray"
                             android:gravity="center_vertical"
+                            android:backgroundTint="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/tv_carrot_bar"
                             app:layout_constraintTop_toTopOf="parent" />
