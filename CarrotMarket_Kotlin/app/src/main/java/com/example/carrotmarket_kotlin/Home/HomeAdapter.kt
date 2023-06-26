@@ -1,24 +1,13 @@
 package com.example.carrotmarket_kotlin.Home
 
-import android.content.ContentValues.TAG
 import android.content.Intent
-import android.text.Layout
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.carrotmarket_kotlin.R
 import com.example.carrotmarket_kotlin.databinding.ActivityHomeBinding
-import com.example.carrotmarket_kotlin.databinding.ActivityMainBinding.inflate
 import com.example.carrotmarket_kotlin.databinding.ItemHomeProductListBinding
-import java.util.*
 
 
 class HomeAdapter(private val homeList: MutableList<HomeProductData>) : RecyclerView.Adapter<HomeAdapter.RecHolder>(
@@ -38,8 +27,6 @@ class HomeAdapter(private val homeList: MutableList<HomeProductData>) : Recycler
             intent.putExtra("fromHome", homeList[position])
             ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
-
-
     }
 
     override fun getItemCount(): Int {
